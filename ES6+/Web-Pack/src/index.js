@@ -1,4 +1,2 @@
-import moment from "moment/src/moment"
+const dayjs = require('dayjs')
 
-
-alert(moment().format("HH:MM:SS"))
