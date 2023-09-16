@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>CalculadoraTMB</title>
+</head>
+<body>
+   <div class="container">
+      <h1>Calculadora de Taxa Metabólica Basal</h1>
+      
+      <div class="input-group">
+        <label for="weight">Peso (kg):</label>
+        <input type="number" id="weight" placeholder="Digite seu peso em kg">
+      </div>
+      
+      <div class="input-group">
+        <label for="height">Altura (cm):</label>
+        <input type="number" id="height" placeholder="Digite sua altura em cm">
+      </div>
+      
+      <div class="input-group">
+        <label for="age">Idade:</label>
+        <input type="number" id="age" placeholder="Digite sua idade">
+      </div>
+      
+      <div class="input-group">
+        <label for="gender">Sexo:</label>
+        <div class="radio-group">
+          <input type="radio" id="male" name="gender" value="male" checked>
+          <label for="male">Masculino</label>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Feminino</label>
+        </div>
+      </div>
+    
+      <div class="input-group">
+        <label for="formula">Fórmula:</label>
+        <select id="formula">
+          <option value="harris_benedict">Harris-Benedict Revisada</option>
+          <option value="mifflin_st_jeor">Mifflin-St. Jeor</option>
+          <option value="katch_mcardle">Katch-McArdle</option>
+          <option value="cunningham">Cunningham</option>
+        </select>
+      </div>
+
+      <div class="container">
+         <h1>Calculadora de TMB</h1>
+         <div class="content">
+           <div class="input-container">
+             <!-- Campos de entrada -->
+           </div>
+           <div class="output-container">
+             <!-- Resultado e descrição -->
+           </div>
+         </div>
+         <div class="sidebar">
+           <div id="history-container">
+             <h2>Histórico de Cálculos</h2>
+             <ul id="history-list"></ul>
+           </div>
+         </div>
+       </div> 
+      
+      <button class="btn-calculate" onclick="calculateTMB()">Calcular</button>
+      
+      <div id="result" class="result"></div>
+      <button onclick="clearFields()">Limpar</button>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
